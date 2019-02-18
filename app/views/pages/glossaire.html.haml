@@ -1,0 +1,44 @@
+.banner
+  .banner-content
+    %h1 Mieux comprendre l'immobilier
+
+.preview.container
+  %h5 Ici, j'apprends à parler l'immobilier
+  %p Ce glossaire reprend de nombreuses abréviations ou mot du jargon immobilier. Je pourrais mieux comprendre mon notaire, mon agent immobilier ainsi que les règles de l'achat et de la vente...
+
+.glossaire.container
+  .left-item
+    .response-item
+      %h5 Toutes nos réponses
+      %ul
+        %li
+          = link_to "Qu'est-ce que c'est Bientôt Chez Soi ?", "#"
+        %li
+          = link_to "Comment être-vous rémunérés ?", "#"
+        %li
+          = link_to "Pourquoi avoir confiance en nous ?", "#"
+        %li
+          = link_to "Qu'est-ce qu'une start up?", "#"
+        %li
+          = link_to "Quest-ce que ça veut dire 'place de marché' ?", "#"
+
+    .question-item
+      %h5 J'ai une question !
+      %p Je vous écris à l'aide de mon support préféré.
+
+    .social-item
+      %ul
+        %li
+          %i.fab.fa-facebook.fa-3x
+        %li
+          %i.fab.fa-twitter-square.fa-3x
+        %li
+          %i.fas.fa-envelope-square.fa-3x
+
+  .right-item
+    .alphabet-item
+      %h5 Recherche par lettre
+      - @alphabet.each do |letter|
+        = link_to letter, ""
+
+
