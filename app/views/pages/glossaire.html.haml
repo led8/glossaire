@@ -27,18 +27,18 @@
       %p Je vous écris à l'aide de mon support préféré.
 
     .social-item
-      %ul
-        %li
-          %i.fab.fa-facebook.fa-3x
-        %li
-          %i.fab.fa-twitter-square.fa-3x
-        %li
-          %i.fas.fa-envelope-square.fa-3x
+      = link_to "", "", class: "fab fa-facebook fa-2x"
+      / %i.fab.fa-facebook.fa-2x
+      = link_to "", "", class: "fab fa-twitter-square fa-2x"
+      / %i.fab.fa-twitter-square.fa-2x
+      = link_to "", "", class: "fas fa-envelope-square fa-2x"
+      / %i.fas.fa-envelope-square.fa-2x
 
   .right-item
     .alphabet-item
       %h5 Recherche par lettre
-      - @alphabet.each do |letter|
-        = link_to letter, ""
+      .letters-item
+        - @alphabet.each do |letter|
+          = link_to letter, ""
 
 

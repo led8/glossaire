@@ -30,6 +30,9 @@
   & p {
     color: #3f3b49;
   }
+  & ul {
+    display: table-row;
+  }
   & li {
     margin-bottom: 5px;
     list-style: none;
@@ -52,18 +55,23 @@
   font-size: 12px;
 }
 
-.social-item {
-  text-align: center;
-  & li {
-    display: inline-block;
-  }
-}
-
 .right-item {
   padding: 10px;
   flex: 3;
   & h5 {
     font-weight: bold;
     color: #e67c5c;
+  }
+}
+
+.letters-item {
+  display: flex;
+  justify-content: space-around;
+  & a {
+    color: #3f3b49;
+    font-weight: bold;
+    &:hover {
+      color: #b0c365;
+    }
   }
 }

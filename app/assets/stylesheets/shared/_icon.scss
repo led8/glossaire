@@ -4,13 +4,23 @@ i {
 }
 
 .fa-facebook {
-  color:#3b5998;
+  color:#3b5998 !important;
 }
 
 .fa-twitter-square {
-  color:#38A1F3;
+  color:#38A1F3 !important;
 }
 
 .fa-envelope-square {
-  color:#BD081C;
+  color:#BD081C !important;
+}
+
+.social-item {
+  display: flex;
+  justify-content: center;
+}
+
+.social-item a {
+  text-decoration: none;
+  margin-right: 15px;
 }
