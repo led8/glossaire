@@ -23,4 +23,7 @@ i {
 .social-item a {
   text-decoration: none;
   margin-right: 15px;
+  &:hover {
+    text-decoration: none;
+  }
 }
