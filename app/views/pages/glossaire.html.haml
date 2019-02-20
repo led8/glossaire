@@ -35,7 +35,7 @@
     .alphabet-item
       %h5 Recherche par lettre
       .letters-item
-        - @alphabet.each do |letter|
+        - @alphabet.each_with_index do |letter, index|
           = link_to letter, "#"
       .glossary-item
         - @alphabet.each_with_index do |letter, index|
@@ -46,6 +46,7 @@
                   %h4.panel-title
                     %a.glossary-letter{"aria-controls": "collapse#{index+1}", "aria-expanded": true, "data-parent": "#accordion", "data-toggle": "collapse", href: "#collapse#{index+1}", role: "button"}
                       = letter
+                      %i.fas.fa-angle-down
                 .panel-collapse.collapse.in.glossary-content{"aria-labelledby": "heading#{index+1}", role: "tabpanel", id: "collapse#{index+1}"}
                   .panel-body
                   - if letter
@@ -64,6 +65,7 @@
                   %h4.panel-title
                     %a.collapsed.glossary-letter{"aria-controls": "collapse#{index+1}", "aria-expanded": false, "data-parent": "#accordion", "data-toggle": "collapse", href: "#collapse#{index+1}", role: "button"}
                       = letter
+                      %i.fas.fa-angle-down
                 .panel-collapse.collapse.glossary-content{"aria-labelledby": "heading#{index+1}", role: "tabpanel", id: "collapse#{index+1}"}
                   .panel-body
                   - if letter
