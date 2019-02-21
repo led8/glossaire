@@ -21,7 +21,8 @@
 
 .glossary-item {
   max-height: 280px;
-  overflow: scroll;
+  overflow-y: scroll;
+  position: relative;
 }
 
 .left-item {
@@ -73,6 +74,8 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  position: sticky;
+  top: 0;
   & a {
     color: #3f3b49;
     font-weight: bold;
@@ -104,8 +107,4 @@
     font-weight: bold;
     color: #e67c5c !important;
   }
-}
-
-div.panel {
-  position: relative
 }
