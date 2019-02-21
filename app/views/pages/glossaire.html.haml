@@ -8,75 +8,7 @@
 
 .glossaire.container
   .left-item
-    .response-item
-      %h5 Toutes nos réponses
-      %ul
-        %li
-          = link_to "Qu'est-ce que c'est Bientôt Chez Soi ?", "#"
-        %li
-          = link_to "Comment être-vous rémunérés ?", "#"
-        %li
-          = link_to "Pourquoi avoir confiance en nous ?", "#"
-        %li
-          = link_to "Qu'est-ce qu'une start up?", "#"
-        %li
-          = link_to "Quest-ce que ça veut dire 'place de marché' ?", "#"
-
-    .question-item
-      %h5 J'ai une question !
-      %p Je vous écris à l'aide de mon support préféré.
-
-    .social-item
-      = link_to "", "", class: "fab fa-facebook fa-2x"
-      = link_to "", "", class: "fab fa-twitter-square fa-2x"
-      = link_to "", "", class: "fas fa-envelope-square fa-2x"
+    = render 'shared/glossaire_left'
 
   .right-item
-    .alphabet-item
-      %h5 Recherche par lettre
-      .letters-item
-        - @alphabet.each_with_index do |letter, index|
-          // PASSER ID DE LA TARGET
-          = link_to letter, "#letter-#{index+1}"
-      .glossary-item
-        - @alphabet.each_with_index do |letter, index|
-          - if letter === "B"
-            #accordion.panel-group{"aria-multiselectable": true, role: "tablist"}
-              .panel.panel-default
-                .panel-heading{role: "tab", id: "heading#{index+1}"}
-                  %h4.panel-title
-                    %a.glossary-letter{"aria-controls": "collapse#{index+1}", "aria-expanded": true, "data-parent": "#accordion", "data-toggle": "collapse", href: "#collapse#{index+1}", role: "button", id: "letter-#{index+1}"}
-                      = letter
-                      %i.fas.fa-angle-down
-                .panel-collapse.collapse.in.glossary-content{"aria-labelledby": "heading#{index+1}", role: "tabpanel", id: "collapse#{index+1}"}
-                  .panel-body
-                  - if letter
-                    - @hash.each do |key, value|
-                      - if key.to_s === letter
-                        - value.each do |k, v|
-                          %ul
-                            %li
-                              = k
-                            %li
-                              = v
-                            %br
-          - else
-            #accordion.panel-group{"aria-multiselectable": true, role: "tablist"}
-              .panel.panel-default
-                .panel-heading{role: "tab", id: "heading#{index+1}"}
-                  %h4.panel-title
-                    %a.collapsed.glossary-letter{"aria-controls": "collapse#{index+1}", "aria-expanded": false, "data-parent": "#accordion", "data-toggle": "collapse", href: "#collapse#{index+1}", role: "button", id: "letter-#{index+1}"}
-                      = letter
-                      %i.fas.fa-angle-down
-                .panel-collapse.collapse.glossary-content{"aria-labelledby": "heading#{index+1}", role: "tabpanel", id: "collapse#{index+1}"}
-                  .panel-body
-                  - if letter
-                    - @hash.each do |key, value|
-                      - if key.to_s === letter
-                        - value.each do |k, v|
-                          %ul
-                            %li
-                              = k
-                            %li
-                              = v
-                            %br
+    = render 'shared/glossaire_right'

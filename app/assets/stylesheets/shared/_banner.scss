@@ -1,7 +1,5 @@
 .banner {
   height: 350px;
-  background: url('https://images7.alphacoders.com/314/thumb-1920-314110.jpg') no-repeat center;
-  opacity: 0.3;
   text-align: center;
   display: flex;
   align-items: center;
@@ -11,6 +9,4 @@
 .banner-content h1 {
   font-family: 'Amatic SC', cursive;
   font-size: 70px;
-  z-index: 1 !important;
-  opacity: 1 !important;
 }
